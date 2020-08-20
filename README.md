@@ -24,7 +24,7 @@ Run `npm i` in the root folder
 1. Run `npm run build` for building in production mode
 2. Run `npm run start` for starting in production mode
 
-# Deploy
+<!-- # Deploy
 
 ## Docker build
 Either build your own Docker images
@@ -55,4 +55,4 @@ docker run -d --name facer \
 - `docker push gjovanov\facer`
 
 or use the release.sh script with your own docker hub username and image name:
-- `./release.sh`
+- `./release.sh` -->
