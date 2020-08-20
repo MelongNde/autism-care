@@ -1,6 +1,5 @@
 # face®
 
-[![Facer Demo](https://img.youtube.com/vi/rHUQyRe8JyQ/0.jpg)](https://www.youtube.com/watch?v=rHUQyRe8JyQ)
 
  Realtime Face Recognition app using:
  - [face-api.js](https://github.com/justadudewhohacks/face-api.js)
