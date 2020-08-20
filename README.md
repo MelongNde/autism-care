@@ -1,4 +1,4 @@
-# face®
+# AutismCare®
 
 
  Realtime Face Recognition app using:
@@ -8,7 +8,6 @@
  - [NuxtJS](https://github.com/nuxt/nuxt.js/)
  - [VuetifyJS](https://github.com/vuetifyjs/vuetify)
  - [ExpressJS](https://github.com/expressjs/expressjs.com)
- - [Docker](https://github.com/docker)
 
 
 # Install
