@@ -1,9 +1,7 @@
 <template>
-  <v-layout row
-            wrap
-  >
+  <v-layout row wrap>
     <v-flex xs6>
-      <v-btn @click="train()" color="primary">
+      <v-btn color="primary" @click="train()">
         Train
       </v-btn>
     </v-flex>
@@ -19,7 +17,7 @@
         Training...
       </v-progress-circular>
     </v-flex>
-    <v-flex class="background-color: blue lighten-5 content" light v-for="user in users" :key="user.name" xs12>
+    <v-flex v-for="user in users" :key="user.name" class="background-color: blue lighten-5 content" light xs12>
       <v-card class="background-color: blue lighten-5 content" light>
         <v-card-title>
           <strong class="headline">{{ user.name }}</strong>
@@ -36,12 +34,9 @@
           justify="center"
         >
           <v-flex v-for="(photo, index) in user.photos"
-                  :key="photo"
-                  xs12 md6 lg4
-                  align="center"
-                  justify="center"
+                  :key="photo" xs12 md6 lg4 align="center" justify="center"
           >
-            <v-card flat tile class="d-flex background-color: blue lighten-5 content" light>
+            <v-card flat tile class="d-flex bg-primary lighten-5 content" light>
               <img :id="user.name + index" :src="photo">
             </v-card>
           </v-flex>

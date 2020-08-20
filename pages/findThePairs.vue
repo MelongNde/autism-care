@@ -5,7 +5,7 @@
       <div><span class="label">Turns:</span><span class="value">{{ turns }}</span></div>
     </div>
     <div class="cards">
-      <div :class="{ flipped: card.flipped, found: card.found }" @click="flipCard(card)" v-for="(card, i ) in cards" :key="i" class="card">
+      <div v-for="(card, i ) in cards" :key="i" :class="{ flipped: card.flipped, found: card.found }" class="card" @click="flipCard(card)">
         <div class="back" />
         <div :style="{ backgroundImage: 'url(' + card.image + ')' }" class="front" />
       </div>
@@ -19,7 +19,7 @@
         <div class="score">
           Score: {{ score }}
         </div>
-        <button @click="resetGame()" class="newGame">
+        <button class="newGame" @click="resetGame()">
           New game
         </button>
       </div>
@@ -29,6 +29,8 @@
 
 <script>
 /* eslint-disable */
+import _ from 'lodash'
+
 const CardTypes = [
   { name: 'vue', image: 'https://vuejs.org/images/logo.png' },
   { name: 'express', image: 'https://coligo.io/images/express.svg' },
@@ -59,9 +61,9 @@ const shuffleCards = () => {
     created (){
       /* eslint-disable */
       this.resetGame();
-      if (process.client) {
-        require('vue-lodash')
-      }
+      // if (process.client) {
+      //   require('vue-lodash')
+      // }
     },
     methods: {
       resetGame()

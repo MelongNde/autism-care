@@ -13,8 +13,8 @@
             <v-spacer />
             <v-btn
               :disabled="!valid"
-              @click="register()"
               color="primary"
+              @click="register()"
             >
               Register new!
             </v-btn>
@@ -28,10 +28,10 @@
             <v-card-text>Are you sure you want to delete this user</v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn @click="hideDialog()" color="green darken-1" flat>
+              <v-btn color="green darken-1" flat @click="hideDialog()">
                 Disagree
               </v-btn>
-              <v-btn @click="deleteUpload()" color="green darken-1" flat>
+              <v-btn color="green darken-1" flat @click="deleteUpload()">
                 Agree
               </v-btn>
             </v-card-actions>
@@ -76,7 +76,7 @@
             <v-divider />
           </v-list-item-action>
           <v-list-item-action>
-            <v-btn @click="showDialog(user.name)" color="primary" fab small>
+            <v-btn color="primary" fab small @click="showDialog(user.name)">
               <v-icon>
                 close
               </v-icon>
@@ -91,6 +91,9 @@
 
 <script>
 export default {
+  fetch ({ store }) {
+    return store.dispatch('user/getAll')
+  },
   data () {
     return {
       dialog: false,
@@ -108,9 +111,6 @@ export default {
     users () {
       return this.$store.state.user.list
     }
-  },
-  fetch ({ store }) {
-    return store.dispatch('user/getAll')
   },
 
   methods: {

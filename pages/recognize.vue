@@ -18,7 +18,7 @@
           />
         </v-flex>
         <v-flex xs12 md6>
-           <canvas
+          <canvas
             id="live-canvas"
             width="320"
             height="247"
@@ -32,11 +32,11 @@
           color="error"
           dark
           v-bind="attrs"
-          v-on="on"
           absolute
           bottom
           right
           fab
+          v-on="on"
         >
           <v-icon>mdi-plus</v-icon>
         </v-btn>
@@ -47,7 +47,9 @@
           text
           color="error"
           @click="sheet = !sheet"
-        >close</v-btn>
+        >
+          close
+        </v-btn>
         <div class="py-3 background-color: blue lighten-5 content">
           <v-flex v-if="!isProgressActive" xs12>
             <v-card class="background-color: blue lighten-5 content">
@@ -79,15 +81,15 @@
                 </v-btn-toggle>
               </v-card-actions>
               <v-slider
-                        class="background-color: blue lighten-5 content"
-                        v-model="fps"
-                        :max="60"
-                        :min="1"
-                        :step="1"
-                        label="Desired FPS"
-                        prepend-icon="local_movies"
-                        thumb-label="always"
-                        ticks
+                v-model="fps"
+                class="background-color: blue lighten-5 content"
+                :max="60"
+                :min="1"
+                :step="1"
+                label="Desired FPS"
+                prepend-icon="local_movies"
+                thumb-label="always"
+                ticks
               />
               <p>
                 <v-chip label color="orange" text-color="white">

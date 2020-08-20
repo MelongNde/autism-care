@@ -10,10 +10,10 @@
           <v-card-text>Are you sure you want to delete this photo</v-card-text>
           <v-card-actions>
             <v-spacer />
-            <v-btn @click="hideDialog()" color="green darken-1" flat>
+            <v-btn color="green darken-1" flat @click="hideDialog()">
               Disagree
             </v-btn>
-            <v-btn @click="deleteUpload()" color="green darken-1" flat>
+            <v-btn color="green darken-1" flat @click="deleteUpload()">
               Agree
             </v-btn>
           </v-card-actions>
@@ -46,7 +46,7 @@
           <v-card flat light>
             <form method="POST" class="form-documents" enctype="multipart/form-data">
               Upload photos
-              <input id="fileUpload" :multiple="multiple" @change="filesChange($event.target.name, $event.target.files)" type="file" name="fileUpload">
+              <input id="fileUpload" :multiple="multiple" type="file" name="fileUpload" @change="filesChange($event.target.name, $event.target.files)">
             </form>
           </v-card>
         </v-tab-item>
@@ -58,8 +58,8 @@
             <v-layout row wrap>
               <v-flex xs12 md6>
                 <video
-                  id="live-video"
                   v-if="isCameraStarted"
+                  id="live-video"
                   width="320"
                   height="247"
                   autoplay
@@ -72,9 +72,9 @@
                   height="247"
                 />
               </v-flex>
-              <v-btn v-if="isCameraStarted" @click="takePhoto" color="primary">
-              Take photo
-            </v-btn>
+              <v-btn v-if="isCameraStarted" color="primary" @click="takePhoto">
+                Take photo
+              </v-btn>
             </v-layout>
           </v-card>
         </v-tab-item>
@@ -86,11 +86,11 @@
     >
       <v-card flat tile class="d-flex background-color: blue lighten-5 content" light>
         <v-btn
-          @click="showDialog(photo)"
           fab
           small
           color="primary"
           dark
+          @click="showDialog(photo)"
         >
           <v-icon>close</v-icon>
         </v-btn>

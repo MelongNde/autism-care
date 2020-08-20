@@ -5,18 +5,18 @@
         <div class="quiz-header">
           <h2>Quiz</h2>
         </div>
-        <div v-for="(element, index) in questions.slice(a, b)" :key="index" v-show="quiz" class="quiz-main">
+        <div v-for="(element, index) in questions.slice(a, b)" v-show="quiz" :key="index" class="quiz-main">
           <div class="box-question">
             <h3>Question {{ b }}/{{ questions.length }}</h3>
             <p>{{ element.question }}</p>
-            <img :src=element.image_src width="150" alt="">
+            <img :src="element.image_src" width="150" alt="">
           </div>
           <div class="box-suggestions">
             <ul>
               <li
-                :class="select ? check(item) : ''" @click="selectResponse(item)"
-                v-for="(item, i) in element.suggestions"
-                :key="i"
+                v-for="(item, i) in element.suggestions" :key="i"
+                :class="select ? check(item) : ''"
+                @click="selectResponse(item)"
               >
                 {{ item.suggestion }}
               </li>
@@ -30,7 +30,7 @@
         <div class="quiz-footer">
           <div class="box-button">
             <v-btn color="primary" style="color: white" dark label="Skip" />
-            <v-btn @click="nextQuestion()" dark color="primary" label="Next" />
+            <v-btn dark color="primary" label="Next" @click="nextQuestion()" />
           </div>
         </div>
       </div>

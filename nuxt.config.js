@@ -69,7 +69,7 @@ const config = {
      */
     plugins: [
         // '@/plugins/vuetify'
-        '~/plugins/vue-lodash',
+        // '~/plugins/vue-lodash',
         // '~/plugins/vue-morris'
     ],
 

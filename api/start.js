@@ -1,7 +1,7 @@
-const api = require('./').handler
 const consola = require('consola')
+const config = require('../nuxt.config.js')
 
-let config = require('../nuxt.config.js')
+const api = require('./').handler
 config.dev = !(process.env.NODE_ENV === 'production')
 
 const host = config.env.HOST || 'localhost'

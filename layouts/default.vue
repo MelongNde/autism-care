@@ -11,7 +11,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-divider />
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router>
           <v-list-item-action>
@@ -23,12 +23,12 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-     <v-app-bar :clipped-left="clipped" class="blue" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-app-bar :clipped-left="clipped" class="blue" fixed app>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-toolbar-title>My files</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
@@ -49,11 +49,11 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar> -->
-    <v-content class="background-color: blue lighten-5 content" style="color: #222831" light>
-      <v-container  fluid>
+    <v-main class="background-color: blue lighten-5 content" style="color: #222831" light>
+      <v-container fluid>
         <nuxt light />
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

@@ -1,18 +1,22 @@
 <template>
   <div>
     <v-container grid-list-xs>
-      <h1 class="text-xl-h4">Learn emotions</h1>
+      <h1 class="text-xl-h4">
+        Learn emotions
+      </h1>
     </v-container>
 
-    <v-divider :inset="inset"></v-divider>
+    <v-divider :inset="inset" />
 
     <v-container grid-list-xs>
-      <h4 class="text-xl-h4">Mans</h4>
+      <h4 class="text-xl-h4">
+        Mans
+      </h4>
     </v-container>
 
     <v-container class="my-5" grid-list-xs>
       <v-layout row>
-        <v-flex xs12 md3 v-for="(boyEmotion , index) in boyEmotions" :key="index" class="justify-center">
+        <v-flex v-for="(boyEmotion , index) in boyEmotions" :key="index" xs12 md3 class="justify-center">
           <v-card
             ml-10
             light
@@ -22,17 +26,17 @@
           >
             <v-img
               height="250"
-              :src= boyEmotion.image
-            ></v-img>
+              :src="boyEmotion.image"
+            />
 
-            <v-card-title>{{boyEmotion.title}}</v-card-title>
+            <v-card-title>{{ boyEmotion.title }}</v-card-title>
 
             <v-card-text>
               <v-row
                 align="center"
                 class="mx-0"
               >
-                {{boyEmotion.description}}
+                {{ boyEmotion.description }}
               </v-row>
             </v-card-text>
           </v-card>
@@ -40,13 +44,15 @@
       </v-layout>
     </v-container>
 
-     <v-container grid-list-xs>
-      <h4 class="text-xl-h4">Girls</h4>
+    <v-container grid-list-xs>
+      <h4 class="text-xl-h4">
+        Girls
+      </h4>
     </v-container>
 
     <v-container class="my-5" grid-list-xs>
       <v-layout row>
-        <v-flex xs12 md3 v-for="(girlEmotion , index) in girlEmotions" :key="index" class="justify-center">
+        <v-flex v-for="(girlEmotion , index) in girlEmotions" :key="index" xs12 md3 class="justify-center">
           <v-card
             ml-10
             light
@@ -56,17 +62,17 @@
           >
             <v-img
               height="250"
-              :src= girlEmotion.image
-            ></v-img>
+              :src="girlEmotion.image"
+            />
 
-            <v-card-title>{{girlEmotion.title}}</v-card-title>
+            <v-card-title>{{ girlEmotion.title }}</v-card-title>
 
             <v-card-text>
               <v-row
                 align="center"
                 class="mx-0"
               >
-                {{girlEmotion.description}}
+                {{ girlEmotion.description }}
               </v-row>
             </v-card-text>
           </v-card>
