@@ -92,6 +92,7 @@ const config = {
      ** Build configuration
      */
     build: {
+        standalone: true,
         /*
          ** You can extend webpack config here
          */
@@ -110,7 +111,8 @@ const config = {
                 })
             }
         }
-    }
+    },
+    telemetry: false
 }
 if (isDev) {
     config.axios.baseURL = `http://${env.HOST}:${env.PORT_API}`
